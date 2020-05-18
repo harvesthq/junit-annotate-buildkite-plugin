@@ -11,19 +11,6 @@ junits_dir = ARGV[0]
 abort("Usage: annotate <junits-dir>") unless junits_dir
 abort("#{junits_dir} does not exist") unless Dir.exist?(junits_dir)
 
-job_pattern = ENV['BUILDKITE_PLUGIN_JUNIT_ANNOTATE_JOB_UUID_FILE_PATTERN']
-job_pattern = '-(.*).xml' if !job_pattern || job_pattern.empty?
-
-failure_format = ENV['BUILDKITE_PLUGIN_JUNIT_ANNOTATE_FAILURE_FORMAT']
-failure_format = 'classname' if !failure_format || failure_format.empty?
-
-class Failure < Struct.new(:name, :failed_test, :body, :job, :type, :message)
-end
-
-junit_report_files = Dir.glob(File.join(junits_dir, "**", "*"))
-testcases = 0
-failures = []
-
 def text_content(element)
   # Handle mulptiple CDATA/text children elements
   text = element.texts().map(&:value).join.strip
@@ -44,58 +31,66 @@ def message_content(element)
   end
 end
 
+class Failure < Struct.new(:body, :message, :type, :file, :name, :suite_name)
+  def self.from(element, testcase, testsuite)
+    new(
+      text_content(element),
+      message_content(element),
+      element.attributes['type'],
+      testcase.attributes['file'],
+      testcase.attributes['name'],
+      testsuite.attributes['name']
+    )
+  end
+end
+
+junit_report_files = Dir.glob(File.join(junits_dir, "**", "*"))
+stats = { skipped: 0, failures: 0, tests: 0, assertions: 0, time: 0.0 }
+failures = []
+
 junit_report_files.sort.each do |file|
   next if File.directory?(file)
 
   STDERR.puts "Parsing #{file.sub(junits_dir, '')}"
-  job = File.basename(file)[/#{job_pattern}/, 1]
   xml = File.read(file)
   doc = REXML::Document.new(xml)
 
-  REXML::XPath.each(doc, '//testsuite//testcase') do |testcase|
-    testcases += 1
-    name = testcase.attributes['name'].to_s
-    failed_test = testcase.attributes[failure_format].to_s
-    testcase.elements.each("failure") do |failure|
-      failures << Failure.new(name, failed_test, text_content(failure), job, :failure, message_content(failure))
-    end
-    testcase.elements.each("error") do |error|
-      failures << Failure.new(name, failed_test, text_content(error), job, :error, message_content(error))
+  REXML::XPath.each(doc, '//testsuite') do |testsuite|
+    stats[:assertions] += testsuite.attributes['assertions'].to_i
+    stats[:failures]   += testsuite.attributes['failures'].to_i
+    stats[:skipped]    += testsuite.attributes['skipped'].to_i
+    stats[:tests]      += testsuite.attributes['tests'].to_i
+    stats[:time]       += testsuite.attributes['time'].to_f
+
+    testsuite.elements.each("testcase") do |testcase|
+      testcase.elements.each("failure") do |element|
+        failures << Failure.from(element, testcase, testsuite)
+      end
+      testcase.elements.each("error") do |element|
+        failures << Failure.from(element, testcase, testsuite)
+      end
     end
   end
 end
 
 STDERR.puts "--- ❓ Checking failures"
-STDERR.puts "#{testcases} testcases found"
+STDERR.puts "Ran **#{stats[:tests]}** tests in **#{stats[:time].round(2)}s**."
 
 if failures.empty?
   STDERR.puts "There were no failures/errors 🙌"
   exit 0
 else
-  STDERR.puts "There #{failures.length == 1 ? "is 1 failure/error" : "are #{failures.length} failures/errors" } 😭"
+  STDERR.puts "There #{failures.length == 1 ? "is **1*8 failure/error" : "are **#{failures.length}** failures/errors" } 😭"
 end
 
 STDERR.puts "--- ✍️ Preparing annotation"
 
-failures_count = failures.select {|f| f.type == :failure }.length
-errors_count = failures.select {|f| f.type == :error }.length
-
-puts [
-  failures_count == 0 ? nil : (failures_count == 1 ? "1 failure" : "#{failures_count} failures"),
-  errors_count === 0 ? nil : (errors_count == 1 ? "1 error" : "#{errors_count} errors"),
-].compact.join(" and ") + ":\n\n"
-
+puts "Ran **#{stats[:tests]}** tests in **#{stats[:time].round(2)}s**."
 failures.each do |failure|
   puts "<details>"
-  puts "<summary><code>#{failure.name} in #{failure.failed_test}</code></summary>\n\n"
-  if failure.message
-    puts "<p>#{failure.message.chomp.strip}</p>\n\n"
-  end
+  puts "<summary><code>#{failure.suite_name}##{failure.name}</code></summary>\n\n"
   if failure.body
-    puts "<pre><code>#{CGI.escapeHTML(failure.body.chomp.strip)}</code></pre>\n\n"
-  end
-  if failure.job
-    puts "in <a href=\"##{failure.job}\">Job ##{failure.job}</a>"
+    puts "<pre class=\"term\"><code>#{CGI.escapeHTML(failure.message.chomp.strip)}\n\n#{CGI.escapeHTML(failure.body.chomp.strip)}</code></pre>\n\n"
   end
   puts "</details>"
   puts "" unless failure == failures.last

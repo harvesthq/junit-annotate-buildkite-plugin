@@ -2,7 +2,6 @@
 
 set -euo pipefail
 
-PLUGIN_DIR="$(cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd)/.."
 MAX_SIZE=1024 # in KB
 
 echo "--- :junit: Download the junits"
@@ -30,14 +29,17 @@ buildkite-agent artifact download \
 
 echo "--- :junit: Processing the junits"
 
+# Move ruby code to current dir so we can mount it
+plugin_ruby_dir="$(cd "$( dirname "${BASH_SOURCE[0]}" )/../ruby" && pwd)"
+ruby_dir="$(pwd)/$(mktemp -d "junit-annotate-plugin-ruby-tmp.XXXXXXXXXX")"
+cp -R "${plugin_ruby_dir}" "${ruby_dir}"
+
 docker \
   --log-level "error" \
   run \
     --rm \
-    --volume "$artifacts_dir:/junits" \
-    --volume "$PLUGIN_DIR/ruby:/src" \
-    --env "BUILDKITE_PLUGIN_JUNIT_ANNOTATE_JOB_UUID_FILE_PATTERN=${BUILDKITE_PLUGIN_JUNIT_ANNOTATE_JOB_UUID_FILE_PATTERN:-}" \
-    --env "BUILDKITE_PLUGIN_JUNIT_ANNOTATE_FAILURE_FORMAT=${BUILDKITE_PLUGIN_JUNIT_ANNOTATE_FAILURE_FORMAT:-}" \
+    --volume "${artifacts_dir}:/junits" \
+    --volume "${ruby_dir}/ruby:/src" \
     ruby:2.7-alpine ruby /src/bin/annotate /junits \
       > "$annotation_path"
 

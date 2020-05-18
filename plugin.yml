@@ -7,13 +7,6 @@ configuration:
   properties:
     artifacts:
       type: string
-    job-uuid-file-pattern:
-      type: string
-    failure-format:
-      type: string
-      enum:
-        - classname
-        - file
     fail-build-on-error:
       type: boolean
     context:
