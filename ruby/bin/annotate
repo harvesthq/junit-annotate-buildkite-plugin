@@ -74,13 +74,13 @@ junit_report_files.sort.each do |file|
 end
 
 STDERR.puts "--- ❓ Checking failures"
-STDERR.puts "Ran **#{stats[:tests]}** tests in **#{stats[:time].round(2)}s**."
+STDERR.puts "Ran #{stats[:tests]} tests in #{stats[:time].round(2)}s."
 
 if failures.empty?
   STDERR.puts "There were no failures/errors 🙌"
   exit 0
 else
-  STDERR.puts "There #{failures.length == 1 ? "is **1*8 failure/error" : "are **#{failures.length}** failures/errors" } 😭"
+  STDERR.puts "There #{failures.length == 1 ? "is 1 failure/error" : "are #{failures.length} failures/errors" } 😭"
 end
 
 STDERR.puts "--- ✍️ Preparing annotation"
