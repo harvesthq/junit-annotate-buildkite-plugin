@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite time='9.712489' skipped='0' failures='0' errors='0' name="UserTest" assertions='549' tests='216' timestamp="2019-10-30T12:02:25+00:00">
+  <testcase time='0.115232' file="test/models/user_test.rb" name="test_#trash_destroys_any_pins" assertions='1'>
+  </testcase>
+  <testcase time='0.099578' file="test/models/user_test.rb" name="test_roles=_won&#39;t_trip_on_preceding/trailing_whitespace_in_role_names_or_empty_role_names" assertions='1'>
+  </testcase>
+  <testcase time='0.123234' file="test/models/user_test.rb" name="test_#destroy_doesn&#39;t_unlink_forecast_person_if_it_doesn&#39;t_exist" assertions='3'>
+  </testcase>
+  <testcase time='0.010095' file="test/models/user_test.rb" name="test_#serializable_hash_applies_default_options" assertions='36'>
+  </testcase>
+  <testcase time='0.074790' file="test/models/user_test.rb" name="test_is_active_should_not_be_blank" assertions='19'>
+  </testcase>
+  <testcase time='0.014600' file="test/models/user_test.rb" name="test_managed_users_should_include_self__when_project_manager" assertions='1'>
+  </testcase>
+  <testcase time='0.063383' file="test/models/user_test.rb" name="test_is_contractor_should_not_be_blank" assertions='19'>
+  </testcase>
+  <testcase time='0.008431' file="test/models/user_test.rb" name="test_may_not_close_account__if_admin_but_not_account_owner" assertions='1'>
+  </testcase>
+  <testcase time='0.054740' file="test/models/user_test.rb" name="test_#viewable_clients:_for_regular_users,_includes_projects_that_show_to_all" assertions='1'>
+  </testcase>
+  <testcase time='0.061416' file="test/models/user_test.rb" name="test_sets_the_admin_role_on_creation" assertions='2'>
+  </testcase>
+  <testcase time='0.046498' file="test/models/user_test.rb" name="test_managed_projects_returns_an_array_even_if_the_user_no_longer_has_the_project_manager_role" assertions='7'>
+  </testcase>
+  <testcase time='0.016307' file="test/models/user_test.rb" name="test_admin_manages_project_by_default" assertions='4'>
+  </testcase>
+  <testcase time='0.013628' file="test/models/user_test.rb" name="test_expense_reportable_projects_should_call_company_projects__when_admin" assertions='1'>
+  </testcase>
+  <testcase time='0.022543' file="test/models/user_test.rb" name="test_non-numerical_capacity_is_invalid" assertions='3'>
+  </testcase>
+  <testcase time='0.021664' file="test/models/user_test.rb" name="test_email_uniqueness_excludes_soft-deleted_users" assertions='3'>
+  </testcase>
+  <testcase time='0.041389' file="test/models/user_test.rb" name="test_doesn&#39;t_call_UpdateSenderWorker_when_user_is_created" assertions='1'>
+  </testcase>
+  <testcase time='0.251872' file="test/models/user_test.rb" name="test_adds_new_user_to_all_active_sample_projects_if_there_are_any" assertions='1'>
+  </testcase>
+  <testcase time='0.015779' file="test/models/user_test.rb" name="test_timesheet_version_with_reload_parameter_unmeoizes" assertions='3'>
+  </testcase>
+  <testcase time='0.031063' file="test/models/user_test.rb" name="test_is_project_manager_on__returns_true_on_active_assignments_only" assertions='1'>
+  </testcase>
+  <testcase time='0.008693' file="test/models/user_test.rb" name="test_may_not_close_account__if_owner_of_another_company" assertions='1'>
+  </testcase>
+  <testcase time='0.039198' file="test/models/user_test.rb" name="test_can_export_to_google_docs_is_case_insensitive" assertions='2'>
+  </testcase>
+  <testcase time='0.059112' file="test/models/user_test.rb" name="test_roles=_updates_forecast_role_for_connected_companies" assertions='5'>
+  </testcase>
+  <testcase time='0.073339' file="test/models/user_test.rb" name="test_should_find_entries_for_week__when_time_entries" assertions='1'>
+  </testcase>
+  <testcase time='0.021890' file="test/models/user_test.rb" name="test_special_role_name" assertions='4'>
+  </testcase>
+  <testcase time='0.044505' file="test/models/user_test.rb" name="test_#new_project_with_defaults:_budget_by_project_cost_is_invalid_for_users_without_rates_permissions" assertions='1'>
+  </testcase>
+  <testcase time='0.082736' file="test/models/user_test.rb" name="test_expense_reportable_projects_excludes_trashed_projects" assertions='2'>
+  </testcase>
+  <testcase time='0.039210' file="test/models/user_test.rb" name="test_#reportable_clients_exclude_trashed_clients" assertions='2'>
+  </testcase>
+  <testcase time='0.008473' file="test/models/user_test.rb" name="test_default_hourly_rate_allows_localized_values" assertions='1'>
+  </testcase>
+  <testcase time='0.032979' file="test/models/user_test.rb" name="test_#trashable?_returns_true_if_visible_projects_only_have_0_hour_entries" assertions='3'>
+  </testcase>
+  <testcase time='0.005443' file="test/models/user_test.rb" name="test_internal_returns_true_for_shawns_special_gmail_address" assertions='1'>
+  </testcase>
+  <testcase time='0.005489' file="test/models/user_test.rb" name="test_::role_for_returns_the_user_role_based_on_params" assertions='6'>
+  </testcase>
+  <testcase time='0.022422' file="test/models/user_test.rb" name="test_can_toggle_is_admin_flag_when_there_are_other_admins" assertions='2'>
+  </testcase>
+  <testcase time='0.033144' file="test/models/user_test.rb" name="test_empty_first_name_is_invalid" assertions='3'>
+  </testcase>
+  <testcase time='0.072026' file="test/models/user_test.rb" name="test_#destroy_succeeds_if_Harvest_ID_can&#39;t_find_the_membership" assertions='2'>
+  </testcase>
+  <testcase time='0.271236' file="test/models/user_test.rb" name="test_#trash_or_destroy?" assertions='2'>
+  </testcase>
+  <testcase time='0.042058' file="test/models/user_test.rb" name="test_email_without_valid_domain_is_invalid" assertions='3'>
+  </testcase>
+  <testcase time='0.113558' file="test/models/user_test.rb" name="test_mailchimp_removing_users" assertions='1'>
+  </testcase>
+  <testcase time='0.008418' file="test/models/user_test.rb" name="test_incorrect_tz_defaults_to_utc" assertions='2'>
+  </testcase>
+  <testcase time='0.013471' file="test/models/user_test.rb" name="test_grant_pm_role_does_not_set_project_manager_if_they&#39;re_an_admin" assertions='3'>
+  </testcase>
+  <testcase time='0.007924' file="test/models/user_test.rb" name="test_reportable_users_should_call_managed_users__when_admin" assertions='2'>
+  </testcase>
+  <testcase time='0.020262' file="test/models/user_test.rb" name="test_managed_users_should_be_equal_to_company_users__when_admin" assertions='1'>
+  </testcase>
+  <testcase time='0.009528' file="test/models/user_test.rb" name="test_reportable_users_should_not_call_managed_users__when_basic_user" assertions='1'>
+  </testcase>
+  <testcase time='0.127312' file="test/models/user_test.rb" name="test_restoring_a_trashed_user_updates_project_budgets" assertions='2'>
+  </testcase>
+  <testcase time='0.029330' file="test/models/user_test.rb" name="test_capacity_that_is_already_over_the_limit_and_changes_to_still_above_is_invalid" assertions='3'>
+  </testcase>
+  <testcase time='0.035786' file="test/models/user_test.rb" name="test_pm_managed_project_ids" assertions='4'>
+  </testcase>
+  <testcase time='0.035773' file="test/models/user_test.rb" name="test_after_create_schedules_the_disabling_of_the_timesheet_help_pages" assertions='1'>
+  </testcase>
+  <testcase time='0.014956' file="test/models/user_test.rb" name="test_reportable_users_should_call_managed_users__when_project_manager" assertions='2'>
+  </testcase>
+  <testcase time='0.041815' file="test/models/user_test.rb" name="test_should_find_no_entries_for_week__when_no_time_or_expense_entries" assertions='1'>
+  </testcase>
+  <testcase time='0.027073' file="test/models/user_test.rb" name="test_dismiss_tip_updates_timestamp_if_tip_already_dismissed_for_the_user" assertions='2'>
+  </testcase>
+  <testcase time='0.018352' file="test/models/user_test.rb" name="test_iridesco?" assertions='2'>
+  </testcase>
+  <testcase time='0.122465' file="test/models/user_test.rb" name="test_adding_new_user_to_all_active_sample_projects_adds_activity_log_records_with_the_system_user_if_no_current_user" assertions='2'>
+  </testcase>
+  <testcase time='0.237012' file="test/models/user_test.rb" name="test_should_duplicate_day_entries_from_previous_with_day_entries_today" assertions='2'>
+  </testcase>
+  <testcase time='0.020803' file="test/models/user_test.rb" name="test_updated_since_should_exclude_those_not_updated" assertions='1'>
+  </testcase>
+  <testcase time='0.023562' file="test/models/user_test.rb" name="test_empty_last_name_is_invalid" assertions='3'>
+  </testcase>
+  <testcase time='0.014763' file="test/models/user_test.rb" name="test_special_role_name?" assertions='4'>
+  </testcase>
+  <testcase time='0.012875' file="test/models/user_test.rb" name="test_#reportable_clients_for_admin_are_non_sorted_company_clients" assertions='1'>
+  </testcase>
+  <testcase time='0.036396' file="test/models/user_test.rb" name="test_mailchimp_noop_on_update_without_newsletter_subscription" assertions='2'>
+  </testcase>
+  <testcase time='0.046477' file="test/models/user_test.rb" name="test_add_to_all_projects" assertions='7'>
+  </testcase>
+  <testcase time='0.030564' file="test/models/user_test.rb" name="test_#destroyable?_returns_false_when_user_is_trashed_and_has_expenses" assertions='1'>
+  </testcase>
+  <testcase time='0.056127' file="test/models/user_test.rb" name="test_when_assigning/unassigning_roles,_the_affected_roles_are_touched" assertions='1'>
+  </testcase>
+  <testcase time='0.008297' file="test/models/user_test.rb" name="test_cost_rate_allows_localized_values" assertions='1'>
+  </testcase>
+  <testcase time='0.013076' file="test/models/user_test.rb" name="test_expense_reportable_projects_should_call_expenses_and_assignments__when_basic_user" assertions='1'>
+  </testcase>
+  <testcase time='0.022357' file="test/models/user_test.rb" name="test_managed_projects_should_return_managed_from_given_projects__when_project_manager" assertions='2'>
+  </testcase>
+  <testcase time='0.074014' file="test/models/user_test.rb" name="test_viewable_projects_returns_managed_projects" assertions='2'>
+  </testcase>
+  <testcase time='0.038103' file="test/models/user_test.rb" name="test_setting_is_admin_also_sets_can_see_rates" assertions='2'>
+  </testcase>
+  <testcase time='0.149743' file="test/models/user_test.rb" name="test_is_project_manager_should_not_be_blank" assertions='19'>
+  </testcase>
+  <testcase time='0.057888' file="test/models/user_test.rb" name="test_managed_users_should_include_users_from_inactive_managed_project" assertions='1'>
+  </testcase>
+  <testcase time='0.177593' file="test/models/user_test.rb" name="test_should_duplicate_day_entries_from_previous_with_day_entries__and_ignore_is_billed_status" assertions='2'>
+  </testcase>
+  <testcase time='0.028404' file="test/models/user_test.rb" name="test_long_last_name_is_invalid" assertions='3'>
+  </testcase>
+  <testcase time='0.028086' file="test/models/user_test.rb" name="test_#save_does_not_sync_forecast_person_if_user_not_linked" assertions='3'>
+  </testcase>
+  <testcase time='0.055713' file="test/models/user_test.rb" name="test_mailchimp_not_queued_without_updateable_changes" assertions='1'>
+  </testcase>
+  <testcase time='0.028447' file="test/models/user_test.rb" name="test_projects_managed" assertions='1'>
+  </testcase>
+  <testcase time='0.023164' file="test/models/user_test.rb" name="test_#destroyable?_returns_true_when_user_is_not_trashed" assertions='1'>
+  </testcase>
+  <testcase time='0.045842' file="test/models/user_test.rb" name="test_calls_UpdateSenderWorker_when_user_is_archived" assertions='1'>
+  </testcase>
+  <testcase time='0.028300' file="test/models/user_test.rb" name="test_capacity_that&#39;s_not_a_half_hour_increment_is_invalid" assertions='3'>
+  </testcase>
+  <testcase time='0.008194' file="test/models/user_test.rb" name="test_should_see_dashboard_returns_false_for_users_who_do_not_manage_projects_even_if_their_company_has_dashboard_access" assertions='1'>
+  </testcase>
+  <testcase time='0.025789' file="test/models/user_test.rb" name="test_validates_first_name_for_url" assertions='3'>
+  </testcase>
+  <testcase time='0.042349' file="test/models/user_test.rb" name="test_#viewable_clients:_does_not_include_trashed_clients" assertions='2'>
+  </testcase>
+  <testcase time='0.265873' file="test/models/user_test.rb" name="test_can&#39;t_create_users_when_the_company_has_reached_its_max_number" assertions='5'>
+  </testcase>
+  <testcase time='0.015684' file="test/models/user_test.rb" name="test_have_hours_on_project_and_timeframe" assertions='2'>
+  </testcase>
+  <testcase time='0.023016' file="test/models/user_test.rb" name="test_expense_reportable_projects_should_get_expenses__when_project_manager" assertions='1'>
+  </testcase>
+  <testcase time='0.060509' file="test/models/user_test.rb" name="test_managed_project_ids_excludes_trashed_projects" assertions='2'>
+  </testcase>
+  <testcase time='0.017490' file="test/models/user_test.rb" name="test_managed_users_should_include_users_from_managed_project__when_project_manager" assertions='12'>
+  </testcase>
+  <testcase time='0.014556' file="test/models/user_test.rb" name="test_capacity_that_is_already_over_the_limit_but_does_not_change_is_valid" assertions='1'>
+  </testcase>
+  <testcase time='0.013475' file="test/models/user_test.rb" name="test_viewable_projects_returns_all_projects_for_admins" assertions='1'>
+  </testcase>
+  <testcase time='0.027783' file="test/models/user_test.rb" name="test_#new_project_with_defaults:_users_without_rates_permissions_cannot_change_billing_method" assertions='1'>
+  </testcase>
+  <testcase time='0.005708' file="test/models/user_test.rb" name="test_.trashed_includes_soft-deleted_only" assertions='1'>
+  </testcase>
+  <testcase time='0.118327' file="test/models/user_test.rb" name="test_should_duplicate_day_entries_from_previous_with_day_entries__and_ignore_is_closed_status" assertions='1'>
+  </testcase>
+  <testcase time='0.007519' file="test/models/user_test.rb" name="test_timezone_defaults_to_company_when_nil" assertions='2'>
+  </testcase>
+  <testcase time='0.015951' file="test/models/user_test.rb" name="test_email_with_no_@_is_invalid" assertions='3'>
+  </testcase>
+  <testcase time='0.075687' file="test/models/user_test.rb" name="test_iridesco_client_contact_is_updated_if_invoiced_subscription_and_account_owner_email_changes" assertions='4'>
+  </testcase>
+  <testcase time='0.061394' file="test/models/user_test.rb" name="test_#save_syncs_forecast_person_if_weekly_capacity_changes" assertions='3'>
+  </testcase>
+  <testcase time='0.027718' file="test/models/user_test.rb" name="test_capacity_higher_than_60_hours_is_invalid" assertions='3'>
+  </testcase>
+  <testcase time='0.011471' file="test/models/user_test.rb" name="test_default_hourly_rate_allows_zero" assertions='2'>
+  </testcase>
+  <testcase time='0.014300' file="test/models/user_test.rb" name="test_managed_projects_should_return_all_given_projects__when_admin" assertions='1'>
+  </testcase>
+  <testcase time='0.008973' file="test/models/user_test.rb" name="test_reportable_users_should_return_self_in_array__when_basic_user" assertions='1'>
+  </testcase>
+  <testcase time='0.034915' file="test/models/user_test.rb" name="test_#viewable_clients:_for_regular_users,_includes_clients_of_managed_projects" assertions='1'>
+  </testcase>
+  <testcase time='0.056534' file="test/models/user_test.rb" name="test_calls_ScrubInvoiceAndEstimateHistoryWorker_when_user_is_destroyed" assertions='2'>
+  </testcase>
+  <testcase time='0.018637' file="test/models/user_test.rb" name="test_empty_email_is_invalid" assertions='3'>
+  </testcase>
+  <testcase time='0.136937' file="test/models/user_test.rb" name="test_self.delete_trashed_users_records_user_destroy_to_Activity_Log" assertions='2'>
+  </testcase>
+  <testcase time='0.019093' file="test/models/user_test.rb" name="test_mailchimp_removed_when_unsubscribed_from_newsletter" assertions='1'>
+  </testcase>
+  <testcase time='0.006470' file="test/models/user_test.rb" name="test_duplication_protection_does_not_execute_when_cache_key_absent" assertions='1'>
+  </testcase>
+  <testcase time='0.023107' file="test/models/user_test.rb" name="test_#save_does_not_sync_forecast_person_if_update_comes_from_sync_request" assertions='3'>
+  </testcase>
+  <testcase time='0.005555' file="test/models/user_test.rb" name="test_#visible?" assertions='2'>
+  </testcase>
+  <testcase time='0.128362' file="test/models/user_test.rb" name="test_doesn&#39;t_add_new_user_to_any_projects_by_default_if_there_are_no_active_sample_projects" assertions='1'>
+  </testcase>
+  <testcase time='0.193228' file="test/models/user_test.rb" name="test_destroying_a_user_updates_project_budget_when_budgeted_by_person" assertions='1'>
+  </testcase>
+  <testcase time='0.056350' file="test/models/user_test.rb" name="test_mailchimp_updated_on_update" assertions='1'>
+  </testcase>
+  <testcase time='0.032339' file="test/models/user_test.rb" name="test_mailchimp_resubscribes_when_enabling_newsletter" assertions='1'>
+  </testcase>
+  <testcase time='0.011383' file="test/models/user_test.rb" name="test_managed_projects_should_not_return_any_projects__when_basic_user" assertions='1'>
+  </testcase>
+  <testcase time='0.011864' file="test/models/user_test.rb" name="test_managed_projects_should_return_managed_projects__when_project_manager" assertions='1'>
+  </testcase>
+  <testcase time='0.080402' file="test/models/user_test.rb" name="test_self.delete_trashed_users_raises_a_Bugsnag_if_user_isn&#39;t_removable" assertions='2'>
+  </testcase>
+  <testcase time='0.013264' file="test/models/user_test.rb" name="test_timesheet_version_is_reused_for_an_hour" assertions='3'>
+  </testcase>
+  <testcase time='0.036756' file="test/models/user_test.rb" name="test_bumps_company_cache_on_creation" assertions='1'>
+  </testcase>
+  <testcase time='0.072552' file="test/models/user_test.rb" name="test_#reportable_tasks_for_no_admin_include_all_tasks_(disabled_included)_assigned_to_that_user_without_duplicates" assertions='7'>
+  </testcase>
+  <testcase time='0.019948' file="test/models/user_test.rb" name="test_may_close_account__if_admin_and_no_account_owner_exists" assertions='1'>
+  </testcase>
+  <testcase time='0.025299' file="test/models/user_test.rb" name="test_calls_UpdateSenderWorker_when_user_name_changes" assertions='1'>
+  </testcase>
+  <testcase time='0.019803' file="test/models/user_test.rb" name="test_validates_last_name_for_url" assertions='3'>
+  </testcase>
+  <testcase time='0.165887' file="test/models/user_test.rb" name="test_#recent_projects_tasks_excludes_soft-deleted_tasks" assertions='1'>
+  </testcase>
+  <testcase time='0.010735' file="test/models/user_test.rb" name="test_managed_projects_should_return_all_company_projects__when_admin" assertions='1'>
+  </testcase>
+  <testcase time='0.006655' file="test/models/user_test.rb" name="test_should_see_dashboard_returns_false_for_users_of_companies_without_dashboard" assertions='1'>
+  </testcase>
+  <testcase time='0.010837' file="test/models/user_test.rb" name="test_#viewable_clients:_for_admin_returns_all_visible_company_clients" assertions='1'>
+  </testcase>
+  <testcase time='0.014266' file="test/models/user_test.rb" name="test_dismiss_tip_stores_the_dismissal_for_the_specified_name" assertions='1'>
+  </testcase>
+  <testcase time='0.040673' file="test/models/user_test.rb" name="test_is_regular_user" assertions='4'>
+  </testcase>
+  <testcase time='0.026283' file="test/models/user_test.rb" name="test_negative_capacity_is_invalid" assertions='3'>
+  </testcase>
+  <testcase time='0.074925' file="test/models/user_test.rb" name="test_#trash_updates_project_budgets" assertions='2'>
+  </testcase>
+  <testcase time='0.007977' file="test/models/user_test.rb" name="test_duplication_protection_does_not_execute_when_cache_key_present" assertions='1'>
+  </testcase>
+  <testcase time='0.057876' file="test/models/user_test.rb" name="test_viewable_projects_excludes_deactivated_assignments" assertions='2'>
+  </testcase>
+  <testcase time='0.021048' file="test/models/user_test.rb" name="test_#save_reverts_transaction_if_forecast_fails_due_to_validation_errors" assertions='5'>
+  </testcase>
+  <testcase time='0.064214' file="test/models/user_test.rb" name="test_#destroy_unlink_forecast_person_if_it_exists" assertions='3'>
+  </testcase>
+  <testcase time='0.018088' file="test/models/user_test.rb" name="test_timesheet_version_memoizes_the_result" assertions='3'>
+  </testcase>
+  <testcase time='0.022349' file="test/models/user_test.rb" name="test_updated_since_should_include_only_those_updated" assertions='1'>
+  </testcase>
+  <testcase time='0.195284' file="test/models/user_test.rb" name="test_#trashable?_returns_true_if_there_are_no_visible_projects" assertions='2'>
+  </testcase>
+  <testcase time='0.022643' file="test/models/user_test.rb" name="test_cannot_toggle_is_admin_flag_when_there_are_no_other_admins" assertions='2'>
+  </testcase>
+  <testcase time='0.029160' file="test/models/user_test.rb" name="test_cc_subscription_updated_on_email_change" assertions='1'>
+  </testcase>
+  <testcase time='0.055074' file="test/models/user_test.rb" name="test_should_find_entries_for_week__when_expenses" assertions='1'>
+  </testcase>
+  <testcase time='0.036859' file="test/models/user_test.rb" name="test_sends_a_welcome_email_on_creation" assertions='1'>
+  </testcase>
+  <testcase time='0.027741' file="test/models/user_test.rb" name="test_#reportable_clients_for_no_admin_include_all_clients_(disabled_included)_assigned_to_that_user_without_duplicated" assertions='2'>
+  </testcase>
+  <testcase time='0.050156' file="test/models/user_test.rb" name="test_#trash_or_destroy?_for_a_trashed_user" assertions='2'>
+  </testcase>
+  <testcase time='0.009592' file="test/models/user_test.rb" name="test_#reportable_tasks_for_admin_are_non_sorted_company_tasks" assertions='1'>
+  </testcase>
+  <testcase time='0.026143' file="test/models/user_test.rb" name="test_self.delete_trashed_users_does_not_destroy_a_user_if_it_has_day_entries_with_hours" assertions='1'>
+  </testcase>
+  <testcase time='0.031891' file="test/models/user_test.rb" name="test_#destroyable?_returns_false_when_user_is_trashed_and_has_entries_with_hours" assertions='1'>
+  </testcase>
+  <testcase time='0.067554' file="test/models/user_test.rb" name="test_roles=_accepts_an_array_of_strings_of_roles" assertions='2'>
+  </testcase>
+  <testcase time='0.033796' file="test/models/user_test.rb" name="test_#new_project_with_defaults:_is_fixed_fee_is_invalid_for_users_without_rates_permissions" assertions='1'>
+  </testcase>
+  <testcase time='0.013739' file="test/models/user_test.rb" name="test_cost_rate_does_not_allow_negative_value" assertions='2'>
+  </testcase>
+  <testcase time='0.050791' file="test/models/user_test.rb" name="test_#add_to_projects_sets_use_default_rates_to_true_and_hourly_rate_to_nil" assertions='4'>
+  </testcase>
+  <testcase time='0.020810' file="test/models/user_test.rb" name="test_long_email_is_invalid" assertions='3'>
+  </testcase>
+  <testcase time='0.009677' file="test/models/user_test.rb" name="test_.visible_excludes_soft-deleted" assertions='1'>
+  </testcase>
+  <testcase time='0.012558' file="test/models/user_test.rb" name="test_managed_projects_should_not_return_any_given_projects__when_basic_user" assertions='1'>
+  </testcase>
+  <testcase time='0.076037' file="test/models/user_test.rb" name="test_archiving_with_a_running_timer_is_invalid" assertions='2'>
+  </testcase>
+  <testcase time='0.061314' file="test/models/user_test.rb" name="test_calls_UpdateSenderWorker_when_user_is_destroyed" assertions='2'>
+  </testcase>
+  <testcase time='0.009404' file="test/models/user_test.rb" name="test_normalize_assigned_timezone" assertions='1'>
+  </testcase>
+  <testcase time='0.044894' file="test/models/user_test.rb" name="test_can_export_to_google_docs" assertions='3'>
+  </testcase>
+  <testcase time='0.009894' file="test/models/user_test.rb" name="test_average_joe_managed_project_ids" assertions='1'>
+  </testcase>
+  <testcase time='0.132853' file="test/models/user_test.rb" name="test_self.delete_trashed_users_destroys_users_trashed_for_more_than_30_days" assertions='2'>
+  </testcase>
+  <testcase time='0.008310' file="test/models/user_test.rb" name="test_timezone_is_set_to_nil_when_assigned_the_company_default" assertions='3'>
+  </testcase>
+  <testcase time='0.014090' file="test/models/user_test.rb" name="test_#removable?_returns_false_when_user_has_entries" assertions='1'>
+  </testcase>
+  <testcase time='0.024377' file="test/models/user_test.rb" name="test_#new_project_with_defaults:_do_not_throw_when_no_project_exists" assertions='0'>
+  </testcase>
+  <testcase time='0.048096' file="test/models/user_test.rb" name="test_create_new_user" assertions='1'>
+  </testcase>
+  <testcase time='0.010485' file="test/models/user_test.rb" name="test_admin_managed_project_ids" assertions='2'>
+  </testcase>
+  <testcase time='0.088620' file="test/models/user_test.rb" name="test_self.delete_trashed_users_destroys_a_user_if_it_has_no_day_entries_with_hours" assertions='1'>
+  </testcase>
+  <testcase time='0.013344' file="test/models/user_test.rb" name="test_managed_users_should_be_empty__when_basic_user" assertions='1'>
+  </testcase>
+  <testcase time='0.030423' file="test/models/user_test.rb" name="test_skips_tracking_creation_in_activity_log_without_created_by" assertions='1'>
+  </testcase>
+  <testcase time='0.034735' file="test/models/user_test.rb" name="test_#new_project_with_defaults:_copy_default_attributes" assertions='1'>
+  </testcase>
+  <testcase time='0.033468' file="test/models/user_test.rb" name="test_new_users_get_their_identity_account_id_from_the_company" assertions='1'>
+  </testcase>
+  <testcase time='0.011398' file="test/models/user_test.rb" name="test_should_see_dashboard_returns_false_for_users_who_do_not_manage_projects" assertions='1'>
+  </testcase>
+  <testcase time='0.031974' file="test/models/user_test.rb" name="test_#destroyable?_returns_true_when_user_is_trashed_has_no_entries_with_hours_and_no_expenses" assertions='1'>
+  </testcase>
+  <testcase time='0.033265' file="test/models/user_test.rb" name="test_#save_does_not_sync_forecast_person_if_weekly_capacity_does_not_change" assertions='3'>
+  </testcase>
+  <testcase time='0.014030' file="test/models/user_test.rb" name="test_cost_rate_allows_zero" assertions='2'>
+  </testcase>
+  <testcase time='0.021069' file="test/models/user_test.rb" name="test_valid_email_is_valid" assertions='3'>
+  </testcase>
+  <testcase time='0.005779' file="test/models/user_test.rb" name="test_internal_returns_false_for_a_non_internal_address" assertions='1'>
+  </testcase>
+  <testcase time='0.114435' file="test/models/user_test.rb" name="test_should_duplicate_day_entries_from_previous_with_day_entries__except_those_with_inactive_projects" assertions='2'>
+  </testcase>
+  <testcase time='0.023104' file="test/models/user_test.rb" name="test_blank_capacity_is_invalid" assertions='3'>
+  </testcase>
+  <testcase time='0.014198' file="test/models/user_test.rb" name="test_timesheet_version_returns_current_time_as_float" assertions='1'>
+  </testcase>
+  <testcase time='0.086460' file="test/models/user_test.rb" name="test_duplicate_prior_timesheet_created_day_entries_are_tracked_in_the_activity_log" assertions='1'>
+  </testcase>
+  <testcase time='0.061173' file="test/models/user_test.rb" name="test_managed_users_should_not_include_users_from_assigned_but_unmanaged_project" assertions='1'>
+  </testcase>
+  <testcase time='0.082365' file="test/models/user_test.rb" name="test_roles=_accepts_a_collection_of_Roles" assertions='1'>
+  </testcase>
+  <testcase time='0.006885' file="test/models/user_test.rb" name="test_#trashed?" assertions='2'>
+  </testcase>
+  <testcase time='0.043953' file="test/models/user_test.rb" name="test_viewable_projects_returns_projects_with_show_budget_to_all_true" assertions='2'>
+  </testcase>
+  <testcase time='0.048746' file="test/models/user_test.rb" name="test_#destroy_removes_membership_in_Harvest_ID" assertions='1'>
+  </testcase>
+  <testcase time='0.113027' file="test/models/user_test.rb" name="test_should_not_duplicate_two_same_project_and_task_day_entries_from_previous" assertions='2'>
+  </testcase>
+  <testcase time='0.008898' file="test/models/user_test.rb" name="test_may_close_account__if_account_owner" assertions='1'>
+  </testcase>
+  <testcase time='0.062716' file="test/models/user_test.rb" name="test_roles=_accepts_a_collection_of_strings" assertions='1'>
+  </testcase>
+  <testcase time='0.021236' file="test/models/user_test.rb" name="test_#removable?_returns_false_when_user_has_expenses" assertions='1'>
+  </testcase>
+  <testcase time='0.017599' file="test/models/user_test.rb" name="test_expense_reportable_clients_should_delegate_to_expense_reportable_projects" assertions='2'>
+  </testcase>
+  <testcase time='0.040831' file="test/models/user_test.rb" name="test_#trashable?_returns_true_if_visible_projects_have_no_time_or_expenses_logged" assertions='3'>
+  </testcase>
+  <testcase time='0.037023' file="test/models/user_test.rb" name="test_mailchimp_updated_on_creation" assertions='1'>
+  </testcase>
+  <testcase time='0.119732' file="test/models/user_test.rb" name="test_should_duplicate_day_entries_from_previous_with_day_entries_yesterday" assertions='2'>
+  </testcase>
+  <testcase time='0.034925' file="test/models/user_test.rb" name="test_tracks_creation_in_activity_log" assertions='1'>
+  </testcase>
+  <testcase time='0.005823' file="test/models/user_test.rb" name="test_internal_returns_true_for_an_email_address_from_an_internal_domain" assertions='1'>
+  </testcase>
+  <testcase time='0.009459' file="test/models/user_test.rb" name="test_#reportable_tasks_do_not_return_soft-deleted_tasks" assertions='1'>
+  </testcase>
+  <testcase time='0.141050' file="test/models/user_test.rb" name="test_should_duplicate_day_entries_and_notes_from_previous_with_day_entries" assertions='5'>
+  </testcase>
+  <testcase time='0.060568' file="test/models/user_test.rb" name="test_#new_project_with_defaults:_budget_by_task_fees_is_invalid_for_users_without_rates_permissions" assertions='1'>
+  </testcase>
+  <testcase time='0.028767' file="test/models/user_test.rb" name="test_#removable?_returns_true_when_user_has_no_entries_or_expenses" assertions='1'>
+  </testcase>
+  <testcase time='0.028846' file="test/models/user_test.rb" name="test_has_access_to_all_projects_adds_to_all_projects" assertions='4'>
+  </testcase>
+  <testcase time='0.027848' file="test/models/user_test.rb" name="test_managed_users_should_be_sorted_by_full_name_and_case_insensitive__when_admin" assertions='1'>
+  </testcase>
+  <testcase time='0.049761' file="test/models/user_test.rb" name="test_#destroy_doesn&#39;t_remove_membership_in_Harvest_ID_if_user_hadn&#39;t_accepted_an_invitation" assertions='1'>
+  </testcase>
+  <testcase time='0.059156' file="test/models/user_test.rb" name="test_viewable_projects_excludes_trashed_projects" assertions='2'>
+  </testcase>
+  <testcase time='0.071389' file="test/models/user_test.rb" name="test_cannot_destroy_a_user_with_a_running_timer" assertions='3'>
+  </testcase>
+  <testcase time='0.031709' file="test/models/user_test.rb" name="test_has_access_to_all_projects_adds_to_all_projects__on_user_create" assertions='2'>
+  </testcase>
+  <testcase time='0.019847' file="test/models/user_test.rb" name="test_grant_pm_role_sets_project_manager_if_they&#39;re_not_already" assertions='5'>
+  </testcase>
+  <testcase time='0.021655' file="test/models/user_test.rb" name="test_long_first_name_is_invalid" assertions='3'>
+  </testcase>
+  <testcase time='0.015408' file="test/models/user_test.rb" name="test_managed_users_should_be_sorted_by_full_name_and_case_insensitive__when_project_manager" assertions='1'>
+  </testcase>
+  <testcase time='0.056016' file="test/models/user_test.rb" name="test_#destroy_is_rolled_back_if_request_to_remove_membership_in_Harvest_ID_errors_out" assertions='2'>
+  </testcase>
+  <testcase time='0.024066' file="test/models/user_test.rb" name="test_bump_timesheet_version_updates_the_timesheet_version" assertions='4'>
+  </testcase>
+  <testcase time='0.013655' file="test/models/user_test.rb" name="test_managed_users_should_be_distinct__when_project_manager" assertions='1'>
+  </testcase>
+  <testcase time='0.042309' file="test/models/user_test.rb" name="test_managed_projects_excludes_trashed_projects" assertions='2'>
+  </testcase>
+  <testcase time='0.011956' file="test/models/user_test.rb" name="test_internal_matches_case_insensitively" assertions='1'>
+  </testcase>
+  <testcase time='0.029348' file="test/models/user_test.rb" name="test_email_uniqueness" assertions='3'>
+  </testcase>
+  <testcase time='0.067618' file="test/models/user_test.rb" name="test_is_admin_should_not_be_blank" assertions='19'>
+  </testcase>
+  <testcase time='0.084508' file="test/models/user_test.rb" name="test_adding_new_user_to_all_active_sample_projects_adds_activity_log_records_if_there&#39;s_a_current_user" assertions='2'>
+  </testcase>
+  <testcase time='0.025896' file="test/models/user_test.rb" name="test_calls_UpdateSenderWorker_when_user_email_changes" assertions='1'>
+  </testcase>
+  <testcase time='0.080355' file="test/models/user_test.rb" name="test_has_access_to_all_future_projects_should_not_be_blank" assertions='19'>
+  </testcase>
+  <testcase time='0.047969' file="test/models/user_test.rb" name="test_sets_the_pm_role_on_creation" assertions='5'>
+  </testcase>
+  <testcase time='0.008048' file="test/models/user_test.rb" name="test_should_see_dashboard_returns_true_for_users_of_companies_with_dashboard_access_who_manage_projects" assertions='1'>
+  </testcase>
+  <testcase time='0.013798' file="test/models/user_test.rb" name="test_default_hourly_rate_does_not_allow_negative_value" assertions='2'>
+  </testcase>
+  <testcase time='0.008827' file="test/models/user_test.rb" name="test_able_to_log_in" assertions='3'>
+  </testcase>
+</testsuite>

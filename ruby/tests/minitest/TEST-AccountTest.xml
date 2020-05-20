@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite time='0.309952' skipped='0' failures='1' errors='0' name="AccountTest" assertions='12' tests='11' timestamp="2020-05-12T17:51:26+00:00">
+  <testcase time='0.234339' file="test/models/account_test.rb" name="test_deleting_an_account_deletes_it&#39;s_invitation_codes" assertions='1'></testcase>
+  <testcase time='0.005240' file="test/models/account_test.rb" name="test_harvest_accounts_have_the_name_limited_to_90_characters" assertions='1'>
+    <failure type='Minitest::Assertion' message="Expected: &quot;foo bar&quot;&#13;&#10;  Actual: &quot;bar foo&quot;">test/models/account_test.rb:23:in `block in &lt;class:AccountTest&gt;&#39;
+    </failure>
+  </testcase>
+  <testcase time='0.017271' file="test/models/account_test.rb" name="test_validate_account_name_does_not_include_QQ_messenger_handles" assertions='1'>
+  </testcase>
+  <testcase time='0.006127' file="test/models/account_test.rb" name="test_validate_account_name_works_with_urls" assertions='1'>
+  </testcase>
+  <testcase time='0.005438' file="test/models/account_test.rb" name="test_validate_account_name_works_with_things_that_look_like_urls" assertions='1'>
+  </testcase>
+  <testcase time='0.005213' file="test/models/account_test.rb" name="test_validate_account_name_works_with_chinese_content" assertions='1'>
+  </testcase>
+  <testcase time='0.004143' file="test/models/account_test.rb" name="test_validate_account_name_works_with_russian_content" assertions='1'>
+  </testcase>
+  <testcase time='0.017926' file="test/models/account_test.rb" name="test_href_returns_link_to_product_account" assertions='2'>
+  </testcase>
+  <testcase time='0.004285' file="test/models/account_test.rb" name="test_validate_account_name_does_not_include_urls_and_russian_content" assertions='1'>
+  </testcase>
+  <testcase time='0.004724' file="test/models/account_test.rb" name="test_validate_account_name_does_not_include_urls_and_are_longer_than_72_characters" assertions='1'>
+  </testcase>
+  <testcase time='0.005247' file="test/models/account_test.rb" name="test_validate_account_name_does_not_include_urls_and_chinese_content" assertions='1'>
+  </testcase>
+</testsuite>

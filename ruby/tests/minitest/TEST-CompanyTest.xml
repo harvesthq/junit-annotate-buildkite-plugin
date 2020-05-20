@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite time='2.532200' skipped='0' failures='1' errors='0' name="CompanyTest" assertions='14' tests='8'>
+  <testcase time='2.278731' file="test/models/company_test.rb" name="test_#timesheet_version_returns_a_current_timestamp_if_the_latest_timesheet_version_from_its_users_is_more_than_one_hour_old_new" assertions='2'>
+    <failure type='Minitest::Assertion' message="--- expected&#13;&#10;+++ actual&#13;&#10;@@ -1,2 +1,2 @@&#13;&#10;-# encoding: US-ASCII&#13;&#10;-&quot;1517933436.0&quot;&#13;&#10;+# encoding: ASCII-8BIT&#13;&#10;+&quot;1517928036.0&quot;&#13;&#10;">test/models/company_test.rb:2288:in `block (3 levels) in &lt;class:CompanyTest&gt;&#39;
+test/models/company_test.rb:2287:in `block (2 levels) in &lt;class:CompanyTest&gt;&#39;
+    </failure>
+  </testcase>
+  <testcase time='0.024412' file="test/models/company_test.rb" name="test_#timesheet_version_memoizes_the_result_old" assertions='3'>
+  </testcase>
+  <testcase time='0.056107' file="test/models/company_test.rb" name="test_#timesheet_version_returns_the_current_timestamp_by_default_old" assertions='1'>
+  </testcase>
+  <testcase time='0.046049' file="test/models/company_test.rb" name="test_#timesheet_version_returns_the_maximum_timesheet_version_from_its_users_new" assertions='1'>
+  </testcase>
+  <testcase time='0.037210' file="test/models/company_test.rb" name="test_#timesheet_version_returns_the_maximum_timesheet_version_from_its_users_old" assertions='1'>
+  </testcase>
+  <testcase time='0.026454' file="test/models/company_test.rb" name="test_#timesheet_version_memoizes_the_result_new" assertions='3'>
+  </testcase>
+  <testcase time='0.022278' file="test/models/company_test.rb" name="test_#timesheet_version_returns_the_current_timestamp_by_default_new" assertions='1'>
+  </testcase>
+  <testcase time='0.040959' file="test/models/company_test.rb" name="test_#timesheet_version_returns_a_current_timestamp_if_the_latest_timesheet_version_from_its_users_is_more_than_one_hour_old_old" assertions='2'>
+  </testcase>
+</testsuite>
