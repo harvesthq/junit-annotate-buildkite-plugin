@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite time='2.407072' skipped='0' failures='0' errors='0' name="UserBillableRatesTest" assertions='24' tests='12' timestamp="2019-10-30T12:02:25+00:00">
+  <testcase time='1.682841' file="test/models/user_test.rb" name="test_updating_a_user&#39;s_default_hourly_rate_does_not_update_their_day_entries_on_projects_using_custom_rates" assertions='1'>
+  </testcase>
+  <testcase time='0.054860' file="test/models/user_test.rb" name="test_updating_a_user&#39;s_default_hourly_rate_does_not_update_their_day_entries_on_projects_not_billed_by_people" assertions='1'>
+  </testcase>
+  <testcase time='0.078873' file="test/models/user_test.rb" name="test_updating_a_user&#39;s_default_hourly_rate_updates_their_day_entries_on_projects_billed_by_people_using_default_rates" assertions='1'>
+  </testcase>
+  <testcase time='0.073080' file="test/models/user_test.rb" name="test_changing_a_user&#39;s_default_hourly_rate_value_updates_the_billable_rate_record" assertions='3'>
+  </testcase>
+  <testcase time='0.049757' file="test/models/user_test.rb" name="test_clearing_a_user&#39;s_default_hourly_rate_does_not_update_their_day_entries_on_projects_using_custom_rates" assertions='2'>
+  </testcase>
+  <testcase time='0.047103' file="test/models/user_test.rb" name="test_clearing_a_user&#39;s_default_hourly_rate_does_not_update_their_day_entries_on_projects_not_billed_by_people" assertions='2'>
+  </testcase>
+  <testcase time='0.073064' file="test/models/user_test.rb" name="test_clearing_a_user&#39;s_default_hourly_rate_updates_their_day_entries_on_projects_billed_by_people_using_default_rates" assertions='2'>
+  </testcase>
+  <testcase time='0.058698' file="test/models/user_test.rb" name="test_clearing_a_user&#39;s_default_hourly_rate_value_deletes_the_billable_rate_record" assertions='2'>
+  </testcase>
+  <testcase time='0.095213' file="test/models/user_test.rb" name="test_updating_a_user&#39;s_default_hourly_rate_directly_clears_existing_billable_rate_records" assertions='3'>
+  </testcase>
+  <testcase time='0.135549' file="test/models/user_test.rb" name="test_creating_a_user_with_a_default_hourly_rate_value_creates_a_billable_rate_record" assertions='3'>
+  </testcase>
+  <testcase time='0.029023' file="test/models/user_test.rb" name="test_creating_a_user_without_a_default_hourly_rate_value_does_not_create_a_billable_rate_record" assertions='1'>
+  </testcase>
+  <testcase time='0.029011' file="test/models/user_test.rb" name="test_setting_a_user&#39;s_default_hourly_rate_value_creates_a_billable_rate_record" assertions='3'>
+  </testcase>
+</testsuite>

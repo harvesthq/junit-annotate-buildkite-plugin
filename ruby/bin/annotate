@@ -11,36 +11,59 @@ junits_dir = ARGV[0]
 abort("Usage: annotate <junits-dir>") unless junits_dir
 abort("#{junits_dir} does not exist") unless Dir.exist?(junits_dir)
 
-def text_content(element)
+class Failure < Struct.new(:element, :testcase, :testsuite)
+  def title
+    if rspec?
+      testcase.attributes['classname']
+    else
+      "#{suite_name}##{case_name}"
+    end
+  end
+
+  def description
+    if rspec?
+      CGI.escapeHTML(text.chomp.strip)
+    else
+      "#{CGI.escapeHTML(message.chomp.strip)}\n\n#{CGI.escapeHTML(text.chomp.strip)}"
+    end
+  end
+
+  private
+
+  def rspec?
+    suite_name == "rspec"
+  end
+
   # Handle mulptiple CDATA/text children elements
-  text = element.texts().map(&:value).join.strip
-  if text.empty?
-    nil
-  else
-    text
+  def text
+    text = element.texts().map(&:value).join.strip
+    if text.empty?
+      nil
+    else
+      text
+    end
   end
-end
 
-def message_content(element)
   # Handle empty attributes
-  message = element.attributes['message'];
-  if message.nil? || message.empty?
-    nil
-  else
-    message.to_s
+  def message
+    message = element.attributes['message'];
+    if message.nil? || message.empty?
+      nil
+    else
+      message.to_s
+    end
   end
-end
 
-class Failure < Struct.new(:body, :message, :type, :file, :name, :suite_name)
-  def self.from(element, testcase, testsuite)
-    new(
-      text_content(element),
-      message_content(element),
-      element.attributes['type'],
-      testcase.attributes['file'],
-      testcase.attributes['name'],
-      testsuite.attributes['name']
-    )
+  def file
+    testcase.attributes['file']
+  end
+
+  def case_name
+    testcase.attributes['name']
+  end
+
+  def suite_name
+    testsuite.attributes['name']
   end
 end
 
@@ -64,10 +87,10 @@ junit_report_files.sort.each do |file|
 
     testsuite.elements.each("testcase") do |testcase|
       testcase.elements.each("failure") do |element|
-        failures << Failure.from(element, testcase, testsuite)
+        failures << Failure.new(element, testcase, testsuite)
       end
       testcase.elements.each("error") do |element|
-        failures << Failure.from(element, testcase, testsuite)
+        failures << Failure.new(element, testcase, testsuite)
       end
     end
   end
@@ -88,10 +111,8 @@ STDERR.puts "--- ✍️ Preparing annotation"
 puts "Ran **#{stats[:tests]}** tests in **#{stats[:time].round(2)}s**."
 failures.each do |failure|
   puts "<details>"
-  puts "<summary><code>#{failure.suite_name}##{failure.name}</code></summary>\n\n"
-  if failure.body
-    puts "<pre class=\"term\"><code>#{CGI.escapeHTML(failure.message.chomp.strip)}\n\n#{CGI.escapeHTML(failure.body.chomp.strip)}</code></pre>\n\n"
-  end
+  puts "<summary><code>#{failure.title}</code></summary>\n\n"
+  puts "<pre class=\"term\"><code>#{failure.description}</code></pre>\n\n"
   puts "</details>"
   puts "" unless failure == failures.last
 end

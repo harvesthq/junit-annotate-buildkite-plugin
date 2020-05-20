@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite time='0.675556' skipped='0' failures='0' errors='0' name="UserCostRatesTest" assertions='45' tests='19' timestamp="2019-10-30T12:02:25+00:00">
+  <testcase time='0.055335' file="test/models/user_test.rb" name="test_#cost_rate_for_date_returns_the_first_cost_rate_that_covers_the_provided_date" assertions='2'>
+  </testcase>
+  <testcase time='0.009285' file="test/models/user_test.rb" name="test_#many_harvest_accounts?_returns_false_when_user_has_one_harvest_account_or_less" assertions='2'>
+  </testcase>
+  <testcase time='0.034878' file="test/models/user_test.rb" name="test_setting_a_user&#39;s_cost_rate_value_creates_a_cost_rate_record" assertions='3'>
+  </testcase>
+  <testcase time='0.007999' file="test/models/user_test.rb" name="test_#cost_rate_for_date_returns_nil_when_the_user_has_no_cost_rates" assertions='1'>
+  </testcase>
+  <testcase time='0.054537' file="test/models/user_test.rb" name="test_clearing_a_user&#39;s_cost_rate_updates_their_day_entries" assertions='2'>
+  </testcase>
+  <testcase time='0.039968' file="test/models/user_test.rb" name="test_creating_a_user_with_a_cost_rate_value_creates_a_cost_rate_record" assertions='3'>
+  </testcase>
+  <testcase time='0.053879' file="test/models/user_test.rb" name="test_#update_day_entries_cost_rate_uses_cost_rates_when_historical_cost_rates_exist" assertions='2'>
+  </testcase>
+  <testcase time='0.067385' file="test/models/user_test.rb" name="test_updating_a_user&#39;s_cost_rate_updates_their_day_entries" assertions='2'>
+  </testcase>
+  <testcase time='0.009777' file="test/models/user_test.rb" name="test_#many_harvest_accounts?_returns_true_when_user_has_one_harvest_account_or_less" assertions='2'>
+  </testcase>
+  <testcase time='0.029396' file="test/models/user_test.rb" name="test_#calendar_integration_enabled_returns_true_if_google_or_outlook_integration_is_set_up" assertions='3'>
+  </testcase>
+  <testcase time='0.031263' file="test/models/user_test.rb" name="test_creating_a_user_without_a_cost_rate_value_does_not_create_a_cost_rate_record" assertions='1'>
+  </testcase>
+  <testcase time='0.049019' file="test/models/user_test.rb" name="test_updating_an_account_owner&#39;s_email_or_name_enqueues_a_job_to_update_company_on_ChartMogul" assertions='4'>
+  </testcase>
+  <testcase time='0.046596' file="test/models/user_test.rb" name="test_clearing_a_user&#39;s_cost_rate_value_deletes_the_cost_rate_record" assertions='2'>
+  </testcase>
+  <testcase time='0.008564' file="test/models/user_test.rb" name="test_#many_accounts?_returns_true_when_user_has_multiple_accounts" assertions='3'>
+  </testcase>
+  <testcase time='0.066216' file="test/models/user_test.rb" name="test_updating_a_user&#39;s_cost_rate_directly_clears_existing_cost_rate_records" assertions='3'>
+  </testcase>
+  <testcase time='0.007349' file="test/models/user_test.rb" name="test_#many_accounts?_returns_false_when_user_has_one_account_or_less" assertions='3'>
+  </testcase>
+  <testcase time='0.048164' file="test/models/user_test.rb" name="test_changing_a_user&#39;s_cost_rate_value_updates_the_cost_rate_record" assertions='3'>
+  </testcase>
+  <testcase time='0.029578' file="test/models/user_test.rb" name="test_deactivation_records" assertions='2'>
+  </testcase>
+  <testcase time='0.026368' file="test/models/user_test.rb" name="test_#update_day_entries_cost_rate_uses_user.cost_rate_when_no_historical_cost_rates_exist" assertions='2'>
+  </testcase>
+</testsuite>

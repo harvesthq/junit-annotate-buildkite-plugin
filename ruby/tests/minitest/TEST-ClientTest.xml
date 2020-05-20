@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite time='5.016328' skipped='0' failures='1' errors='0' name="ClientTest" assertions='130' tests='53' timestamp="2020-05-12T17:12:32+00:00">
+  <testcase time='1.475089' file="test/models/client_test.rb" name="test_#trash_noops_if_client_not_removable" assertions='2'>
+  </testcase>
+  <testcase time='0.004517' file="test/models/client_test.rb" name="test_default_invoice_kind_should_be_accessible_as_last_invoice_kind_also" assertions='1'>
+  </testcase>
+  <testcase time='0.126516' file="test/models/client_test.rb" name="test_.delete_trashed_clients_destroys_clients_trashed_for_more_than_30_days" assertions='1'>
+  </testcase>
+  <testcase time='0.040798' file="test/models/client_test.rb" name="test_client_currency_reads_usd_when_nil_and_when_company_nil" assertions='2'>
+  </testcase>
+  <testcase time='0.426962' file="test/models/client_test.rb" name="test_should_find_expenses__for_a_single_project" assertions='2'>
+  </testcase>
+  <testcase time='0.010816' file="test/models/client_test.rb" name="test_validate_name_uniqueness_when_it_changes" assertions='2'>
+  </testcase>
+  <testcase time='0.163327' file="test/models/client_test.rb" name="test_not_removable_if_invoices" assertions='3'>
+  </testcase>
+  <testcase time='0.014373' file="test/models/client_test.rb" name="test_client_currency_reads_default_value_when_appropriate" assertions='6'>
+  </testcase>
+  <testcase time='0.209095' file="test/models/client_test.rb" name="test_should_find_all_with_expenses_for_user_in_time_period" assertions='5'>
+  </testcase>
+  <testcase time='0.009571' file="test/models/client_test.rb" name="test_archivable_should_return_false__when_active_projects" assertions='1'>
+  </testcase>
+  <testcase time='0.009352' file="test/models/client_test.rb" name="test_client_currency_reads_company_value_when_nil" assertions='2'>
+  </testcase>
+  <testcase time='0.011602' file="test/models/client_test.rb" name="test_validate_name_uniqueness_when_creating" assertions='2'>
+  </testcase>
+  <testcase time='0.598753' file="test/models/client_test.rb" name="test_not_removable_if_client_wide_retainer_exists" assertions='3'>
+  </testcase>
+  <testcase time='0.025706' file="test/models/client_test.rb" name="test_name_validation_ignored_on_allow_duplicate_client_names_is_true" assertions='1'>
+  </testcase>
+  <testcase time='0.016819' file="test/models/client_test.rb" name="test_nil_should_not_be_serialized_as_yaml_in_xml" assertions='1'>
+  </testcase>
+  <testcase time='0.042137' file="test/models/client_test.rb" name="test_#trash_marks_the_client_as_archived" assertions='1'>
+  </testcase>
+  <testcase time='0.027495' file="test/models/client_test.rb" name="test_should_not_save_with_invalid_currency" assertions='2'>
+  </testcase>
+  <testcase time='0.035424' file="test/models/client_test.rb" name="test_#trash_records_a_destroyed_event_in_the_Activity_Log" assertions='1'>
+  </testcase>
+  <testcase time='0.037097' file="test/models/client_test.rb" name="test_#trash_sets_delete_at" assertions='1'>
+  </testcase>
+  <testcase time='0.023520' file="test/models/client_test.rb" name="test_archive_only_if_archivable_validator_should_not_fail__when_client_inactive__and_archivable" assertions='1'>
+  </testcase>
+  <testcase time='0.015125' file="test/models/client_test.rb" name="test_active_should_not_be_blank" assertions='19'>
+  </testcase>
+  <testcase time='0.394536' file="test/models/client_test.rb" name="test_removable_if_no_visible_projects_but_there_are_retainers_linked_to_trashed_projects" assertions='2'>
+  </testcase>
+  <testcase time='0.011660' file="test/models/client_test.rb" name="test_should_save_with_valid_currency" assertions='1'>
+  </testcase>
+  <testcase time='0.020466' file="test/models/client_test.rb" name="test_#default_invoice_settings_returns_hash_with_symbolized_keys" assertions='1'>
+  </testcase>
+  <testcase time='0.031070' file="test/models/client_test.rb" name="test_do_not_validate_name_presence_when_it_has_not_changed" assertions='2'>
+  </testcase>
+  <testcase time='0.009479' file="test/models/client_test.rb" name="test_#default_invoice_settings_returns_empty_hash_if_nil" assertions='1'>
+    <failure type='Minitest::Assertion' message="Expected: {:foo=&gt;false}&#13;&#10;  Actual: {}">test/models/client_test.rb:25:in `block in &lt;class:ClientTest&gt;&#39;
+    </failure>
+  </testcase>
+  <testcase time='0.006911' file="test/models/client_test.rb" name="test_address_should_be_accessible_as_details_also" assertions='1'>
+  </testcase>
+  <testcase time='0.019210' file="test/models/client_test.rb" name="test_archive_only_if_archivable_validator_fails" assertions='2'>
+  </testcase>
+  <testcase time='0.024742' file="test/models/client_test.rb" name="test_client_currency_is_set_to_nil_when_creating_a_client_for_a_company_with_the_same_currency" assertions='2'>
+  </testcase>
+  <testcase time='0.012843' file="test/models/client_test.rb" name="test_validate_nil_name_when_creating" assertions='2'>
+  </testcase>
+  <testcase time='0.027149' file="test/models/client_test.rb" name="test_client_xml" assertions='2'>
+  </testcase>
+  <testcase time='0.074538' file="test/models/client_test.rb" name="test_unique_name_isn&#39;t_required_for_trashed_clients" assertions='0'>
+  </testcase>
+  <testcase time='0.022303' file="test/models/client_test.rb" name="test_updated_since_should_include_only_those_updated" assertions='1'>
+  </testcase>
+  <testcase time='0.027468' file="test/models/client_test.rb" name="test_updated_since_should_exclude_those_not_updated" assertions='1'>
+  </testcase>
+  <testcase time='0.009466' file="test/models/client_test.rb" name="test_#serializable_hash_applies_default_options" assertions='10'>
+  </testcase>
+  <testcase time='0.011920' file="test/models/client_test.rb" name="test_archive_only_if_archivable_validator_should_not_fail__when_client_active" assertions='1'>
+  </testcase>
+  <testcase time='0.009321' file="test/models/client_test.rb" name="test_client_currency_normalization" assertions='6'>
+  </testcase>
+  <testcase time='0.012834' file="test/models/client_test.rb" name="test_removable_only_if_no_projects_or_invoices" assertions='1'>
+  </testcase>
+  <testcase time='0.057136' file="test/models/client_test.rb" name="test_self.delete_trashed_clients_raises_a_Bugsnag_if_client_isn&#39;t_removable" assertions='2'>
+  </testcase>
+  <testcase time='0.020003' file="test/models/client_test.rb" name="test_name_validation_triggered_on_allow_duplicate_client_name_is_false" assertions='3'>
+  </testcase>
+  <testcase time='0.250099' file="test/models/client_test.rb" name="test_not_removable_if_projects" assertions='1'>
+  </testcase>
+  <testcase time='0.013865' file="test/models/client_test.rb" name="test_client_currency_writes_null_when_reverting_to_account_default" assertions='7'>
+  </testcase>
+  <testcase time='0.022740' file="test/models/client_test.rb" name="test_not_removable_if_estimate_exists" assertions='2'>
+  </testcase>
+  <testcase time='0.023614' file="test/models/client_test.rb" name="test_not_removable_if_recurring_invoice_exists" assertions='1'>
+  </testcase>
+  <testcase time='0.019469' file="test/models/client_test.rb" name="test_validate_maximum_name_length" assertions='4'>
+  </testcase>
+  <testcase time='0.053369' file="test/models/client_test.rb" name="test_#restore_sets_delete_at_to_nil_and_adds_&#39;_-_RESTORED&#39;_to_the_name" assertions='3'>
+  </testcase>
+  <testcase time='0.045608' file="test/models/client_test.rb" name="test_self.delete_trashed_clients_records_client_destroy_to_Activity_Log" assertions='2'>
+  </testcase>
+  <testcase time='0.319216' file="test/models/client_test.rb" name="test_should_find_all_with_expenses_except_those_for_trashed_projects_for_user_in_time_period" assertions='2'>
+  </testcase>
+  <testcase time='0.018741' file="test/models/client_test.rb" name="test_unique_name_message_for_archived_clients" assertions='3'>
+  </testcase>
+  <testcase time='0.082689' file="test/models/client_test.rb" name="test_removable_if_all_projects_trashed" assertions='1'>
+  </testcase>
+  <testcase time='0.020371' file="test/models/client_test.rb" name="test_#trashed?_returns_true_if_delete_at_set" assertions='1'>
+  </testcase>
+  <testcase time='0.010156' file="test/models/client_test.rb" name="test_archivable_should_return_true__when_no_active_projects" assertions='1'>
+  </testcase>
+  <testcase time='0.009242' file="test/models/client_test.rb" name="test_do_not_validate_name_uniqueness_when_it_has_not_changed" assertions='2'>
+  </testcase>
+</testsuite>

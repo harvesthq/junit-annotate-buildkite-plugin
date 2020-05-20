@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite time='0.381518' skipped='0' failures='0' errors='0' name="ClientForecastSyncingTest" assertions='20' tests='11' timestamp="2020-05-12T17:12:32+00:00">
+  <testcase time='0.023724' file="test/models/client_test.rb" name="test_#save_unlinks_client_from_Forecast_id_delete_at_changes_to_present" assertions='2'>
+  </testcase>
+  <testcase time='0.010826' file="test/models/client_test.rb" name="test_#forecast_client_returns_linked_Forecast_client" assertions='2'>
+  </testcase>
+  <testcase time='0.021540' file="test/models/client_test.rb" name="test_#save_does_not_sync_Forecast_client_if_update_comes_from_sync_request" assertions='2'>
+  </testcase>
+  <testcase time='0.009579' file="test/models/client_test.rb" name="test_#forecast_client_returns_nil_when_is_new_record" assertions='2'>
+  </testcase>
+  <testcase time='0.010469' file="test/models/client_test.rb" name="test_#linked_to_forecast?_returns_true_when_forecast_is_connected_and_forecast_and_linked_client_is_found" assertions='1'>
+  </testcase>
+  <testcase time='0.235638' file="test/models/client_test.rb" name="test_#destroy_unlinks_client_from_Forecast" assertions='2'>
+  </testcase>
+  <testcase time='0.012685' file="test/models/client_test.rb" name="test_#forecast_client_returns_nil_when_company_isn&#39;t_connected_to_Forecast" assertions='2'>
+  </testcase>
+  <testcase time='0.010054' file="test/models/client_test.rb" name="test_#forecast_client_returns_nil_if_not_found_Forecast_client" assertions='2'>
+  </testcase>
+  <testcase time='0.009764' file="test/models/client_test.rb" name="test_#linked_to_forecast?_returns_false_when_forecast_request_fails" assertions='2'>
+  </testcase>
+  <testcase time='0.026266' file="test/models/client_test.rb" name="test_#save_updates_linked_Forecast_client_when_name_and/or_active_changes" assertions='2'>
+  </testcase>
+  <testcase time='0.010974' file="test/models/client_test.rb" name="test_#linked_to_forecast?_returns_false_when_forecast_is_not_connected" assertions='1'>
+  </testcase>
+</testsuite>
