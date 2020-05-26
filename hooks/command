@@ -30,8 +30,9 @@ buildkite-agent artifact download \
 echo "--- :junit: Processing the junits"
 
 # Move ruby code to current dir so we can mount it
+annotate_dir="${PWD}/$(mktemp -d "junit-annotate-plugin-annotate-tmp.XXXXXXXXXX")"
 annotate_src="${BASH_SOURCE%/*}/../ruby/bin/annotate"
-annotate_path="${PWD}/.buildkite/bin/annotate-tests"
+annotate_path="${annotate_dir}/annotate-tests"
 cp -a "${annotate_src}" "${annotate_path}"
 
 docker \
