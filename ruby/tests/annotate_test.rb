@@ -6,18 +6,12 @@ class AnnotateTest < Minitest::Test
     output, status = Open3.capture2e("#{__dir__}/../bin/annotate", "#{__dir__}/minitest/")
 
     assert_equal <<~OUTPUT, output
-      Parsing TEST-AccountTest.xml
-      Parsing TEST-ClientForecastSyncingTest.xml
-      Parsing TEST-ClientTest.xml
-      Parsing TEST-CompanyTest.xml
-      Parsing TEST-UserBillableRatesTest.xml
-      Parsing TEST-UserCostRatesTest.xml
-      Parsing TEST-UserTest.xml
+      Parsing 8 junit files
       --- ❓ Checking failures
-      Ran 330 tests in 21.04s.
-      There are 3 failures/errors 😭
+      Ran 331 tests in 22.03s.
+      There are 4 failures/errors 😭
       --- ✍️ Preparing annotation
-      Ran **330** tests in **21.04s**.
+      Ran **331** tests in **22.03s**.
       <details>
       <summary><code>AccountTest#test_harvest_accounts_have_the_name_limited_to_90_characters</code></summary>
 
@@ -53,6 +47,18 @@ class AnnotateTest < Minitest::Test
       test/models/company_test.rb:2287:in `block (2 levels) in &lt;class:CompanyTest&gt;&#39;</code></pre>
 
       </details>
+
+      <details>
+      <summary><code>PayPalHelperTest#test_PayPal-availability-check_for_customers_in_india_doesn't_raise_if_company_has_been_deleted</code></summary>
+
+      <pre class=\"term\"><code>OpenSSL::Cipher::CipherError
+
+      app/models/asana_settings.rb:122:in `access_token&#39;
+      app/models/asana_settings.rb:100:in `revoke_token&#39;
+      app/models/company.rb:421:in `destroy&#39;
+      test/helpers/pay_pal_helper_test.rb:93:in `block in &lt;class:PayPalHelperTest&gt;&#39;</code></pre>
+
+      </details>
     OUTPUT
 
     assert_equal 0, status.exitstatus
@@ -62,7 +68,7 @@ class AnnotateTest < Minitest::Test
     output, status = Open3.capture2e("#{__dir__}/../bin/annotate", "#{__dir__}/rspec/")
 
     assert_equal <<~OUTPUT, output
-      Parsing rspec.xml
+      Parsing 1 junit file
       --- ❓ Checking failures
       Ran 11 tests in 76.93s.
       There is 1 failure/error 😭

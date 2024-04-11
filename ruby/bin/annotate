@@ -48,7 +48,7 @@ class Failure < Struct.new(:element, :testcase, :testsuite)
   def message
     message = element.attributes['message'];
     if message.nil? || message.empty?
-      nil
+      element.attributes['type'].to_s
     else
       message.to_s
     end
@@ -71,10 +71,10 @@ junit_report_files = Dir.glob(File.join(junits_dir, "**", "*"))
 stats = { skipped: 0, failures: 0, tests: 0, assertions: 0, time: 0.0 }
 failures = []
 
+STDERR.puts "Parsing #{junit_report_files.length} junit file#{junit_report_files.length == 1 ? '' : 's'}"
 junit_report_files.sort.each do |file|
   next if File.directory?(file)
 
-  STDERR.puts "Parsing #{file.sub(junits_dir, '')}"
   xml = File.read(file)
   doc = REXML::Document.new(xml)
 

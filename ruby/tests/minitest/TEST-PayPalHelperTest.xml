@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite time='0.993586' skipped='0' failures='0' errors='1' name="PayPalHelperTest" assertions='1' tests='1' timestamp="2024-04-10T19:38:51+00:00">
+  <testcase time='0.993586' file="test/helpers/pay_pal_helper_test.rb" name="test_PayPal-availability-check_for_customers_in_india_doesn&#39;t_raise_if_company_has_been_deleted" assertions='1'>
+    <error type='OpenSSL::Cipher::CipherError' message="">app/models/asana_settings.rb:122:in `access_token&#39;
+app/models/asana_settings.rb:100:in `revoke_token&#39;
+app/models/company.rb:421:in `destroy&#39;
+test/helpers/pay_pal_helper_test.rb:93:in `block in &lt;class:PayPalHelperTest&gt;&#39;
+    </error>
+  </testcase>
+</testsuite>
